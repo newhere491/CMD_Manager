@@ -66,10 +66,7 @@ CMD_Manager <-
     {
         if(this.BindFailListener != null)
         {
-            local str = format("Error occured for player %s cmd %s Error msg %s", author.Name, cmd, msg);
-            ::print(str);
-            ::Message(str);
-			this.BindFailListener.call(this.BindFailEnv, type, author, cmd, msg);
+		this.BindFailListener.call(this.BindFailEnv, type, author, cmd, msg);
         }
     }
 
